@@ -1,0 +1,51 @@
+{
+	"name": "vs",
+	"displayName": "vs",
+	"description": "vs",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.52.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:vs.helloWorld",
+		"onCommand:vs.vstest",
+		"onCommand:vs.fetch_get"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "vs.helloWorld",
+				"title": "Hello World"
+			},
+			{
+				"command": "vs.fetch_get",
+				"title": "fetch get"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.52.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.15.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.1.2",
+		"vscode-test": "^1.4.1"
+	},
+	"dependencies": {
+		"google-translate-open-api": "^1.3.7",
+		"node-fetch": "^2.6.1",
+		"request": "^2.88.2"
+	}
+}
