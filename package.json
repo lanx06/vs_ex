@@ -11,8 +11,9 @@
 	],
 	"activationEvents": [
 		"onCommand:vs.helloWorld",
-		"onCommand:vs.vstest",
-		"onCommand:vs.fetch_get"
+		"onCommand:vs.fetch_get",
+		"onCommand:vs.google_translate_ch",
+		"onCommand:vs.google_translate_en"
 	],
 	"main": "./extension.js",
 	"contributes": {
@@ -23,7 +24,15 @@
 			},
 			{
 				"command": "vs.fetch_get",
-				"title": "fetch get"
+				"title": "fetch select url get data and new file"
+			},
+			{
+				"command": "vs.google_translate_ch",
+				"title": "google translate Chinese"
+			},
+			{
+				"command": "vs.google_translate_en",
+				"title": "google translate en"
 			}
 		]
 	},
@@ -46,6 +55,7 @@
 	"dependencies": {
 		"google-translate-open-api": "^1.3.7",
 		"node-fetch": "^2.6.1",
-		"request": "^2.88.2"
+		"request": "^2.88.2",
+		"translation-google": "^0.2.1"
 	}
 }
